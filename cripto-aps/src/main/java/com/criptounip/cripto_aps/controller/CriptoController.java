@@ -29,12 +29,10 @@ public class CriptoController {
 
     @PostMapping("/descriptografar")
     public CriptoResponse descriptografar(@RequestBody CriptoRequest request) {
-        String resultado = criptoService.descriptogrfar(request.getTexto(), request.getChave(), request.getAlgoritmo());
+        String resultado = criptoService.descriptografar(request.getTexto(), request.getChave(), request.getAlgoritmo());
         
         CriptoResponse response = new CriptoResponse();
         response.setResultado(resultado);
         return response;
     }
-    
-    
 }
